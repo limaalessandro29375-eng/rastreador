@@ -1,16 +1,50 @@
-8.821 npm notice New major version of npm available! 10.8.2 -> 11.18.0
-8.821 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.18.0
-8.821 npm notice To update run: npm install -g npm@11.18.0
-8.821 npm notice
-8.821 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-07-06T18_41_58_436Z-debug-0.log
-------
-Dockerfile:4
---------------------
-   2 |     WORKDIR /app
-   3 |     COPY package*.json ./
-   4 | >>> RUN npm ci
-   5 |     COPY prisma ./prisma
-   6 |     RUN npx prisma generate
---------------------
-error: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
-error: exit status 1
+2026-07-06T18:48:29.532416721Z [4/4] Building fresh packages...
+2026-07-06T18:48:32.985168949Z success Saved lockfile.
+2026-07-06T18:48:32.987622892Z $ prisma generate
+2026-07-06T18:48:33.898442603Z Prisma schema loaded from prisma/schema.prisma
+2026-07-06T18:48:34.104604681Z 
+2026-07-06T18:48:34.104641442Z ✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 86ms
+2026-07-06T18:48:34.104646812Z 
+2026-07-06T18:48:34.104651393Z Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+2026-07-06T18:48:34.104655563Z 
+2026-07-06T18:48:34.104660673Z Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+2026-07-06T18:48:34.104666553Z 
+2026-07-06T18:48:34.150175525Z Done in 20.15s.
+2026-07-06T18:48:34.774436418Z ==> Uploading build...
+2026-07-06T18:48:41.388108588Z ==> Uploaded in 5.1s. Compression took 1.5s
+2026-07-06T18:48:41.412080436Z ==> Build successful 🎉
+2026-07-06T18:48:47.680324574Z ==> Deploying...
+2026-07-06T18:48:47.754160396Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-07-06T18:49:02.42622532Z ==> Running 'yarn start'
+2026-07-06T18:49:04.419797191Z yarn run v1.22.22
+2026-07-06T18:49:04.615442312Z $ npx prisma db push && node dist/index.js
+2026-07-06T18:49:16.420629436Z Prisma schema loaded from prisma/schema.prisma
+2026-07-06T18:49:16.51494965Z Datasource "db": PostgreSQL database "postgres", schema "public" at "aws-1-sa-east-1.pooler.supabase.com:5432"
+2026-07-06T18:49:26.383438243Z 
+2026-07-06T18:49:26.383470175Z The database is already in sync with the Prisma schema.
+2026-07-06T18:49:26.383554599Z 
+2026-07-06T18:49:26.384433407Z Running generate... (Use --skip-generate to skip the generators)
+2026-07-06T18:49:26.824608807Z Running generate... - Prisma Client
+2026-07-06T18:49:28.046586362Z ✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 1.22s
+2026-07-06T18:49:28.046779092Z 
+2026-07-06T18:49:28.721848745Z node:internal/modules/cjs/loader:1459
+2026-07-06T18:49:28.721877527Z   throw err;
+2026-07-06T18:49:28.721883467Z   ^
+2026-07-06T18:49:28.721887657Z 
+2026-07-06T18:49:28.721891538Z Error: Cannot find module '/opt/render/project/src/backend/dist/index.js'
+2026-07-06T18:49:28.721894758Z     at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)
+2026-07-06T18:49:28.721898298Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)
+2026-07-06T18:49:28.721901318Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)
+2026-07-06T18:49:28.721905569Z     at Module._load (node:internal/modules/cjs/loader:1242:25)
+2026-07-06T18:49:28.721909179Z     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-07-06T18:49:28.721914819Z     at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+2026-07-06T18:49:28.721919499Z     at node:internal/main/run_main_module:33:47 {
+2026-07-06T18:49:28.721925439Z   code: 'MODULE_NOT_FOUND',
+2026-07-06T18:49:28.72193042Z   requireStack: []
+2026-07-06T18:49:28.72193513Z }
+2026-07-06T18:49:28.72193936Z 
+2026-07-06T18:49:28.7219436Z Node.js v24.14.1
+2026-07-06T18:49:28.817264579Z error Command failed with exit code 1.
+2026-07-06T18:49:28.817323312Z info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+2026-07-06T18:49:30.771702694Z ==> Exited with status 1
+2026-07-06T18:49:30.776699226Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
