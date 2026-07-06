@@ -15,9 +15,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        // TROQUE AQUI pela URL do seu backend antes de gerar o APK!
-        // Ex: "https://rastreador-backend.onrender.com"
-        buildConfigField("String", "API_URL", "\"http://SEU_IP_AQUI:3001\"")
+        buildConfigField("String", "API_URL", "\"https://rastreador-h366.onrender.com\"")
     }
 
     buildTypes {

@@ -1,0 +1,10 @@
+Backend rodando na porta 3001
+==> Your service is live 🎉
+==> 
+==> ///////////////////////////////////////////////////////////
+==> 
+==> Available at your primary URL https://rastreador-h366.onrender.com
+==> 
+==> ///////////////////////////////////////////////////////////
+==> Deploying...
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
