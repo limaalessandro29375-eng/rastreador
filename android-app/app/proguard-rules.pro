@@ -1,0 +1,2 @@
+-keepclassmembers class com.rastreador.app.api.** { *; }
+-keep class com.google.gson.** { *; }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rastreador</string>
+    <string name="channel_name">Rastreamento</string>
+    <string name="channel_description">Notificação do serviço de rastreamento</string>
+</resources>

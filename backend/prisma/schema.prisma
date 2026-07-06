@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  email     String     @unique
+  name      String
+  password  String
+  devices   Device[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Device {
+  id        String     @id @default(uuid())
+  name      String
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
+  locations Location[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Location {
+  id        String   @id @default(uuid())
+  deviceId  String
+  device    Device   @relation(fields: [deviceId], references: [id])
+  lat       Float
+  lng       Float
+  accuracy  Float?
+  speed     Float?
+  altitude  Float?
+  timestamp DateTime @default(now())
+  syncedAt  DateTime @default(now())
+
+  @@index([deviceId, timestamp])
+  @@index([deviceId, syncedAt])
+}

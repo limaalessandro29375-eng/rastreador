@@ -1,0 +1,13 @@
+node_modules/
+.env
+dist/
+.next/
+*.apk
+*.aab
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+.DS_Store
+Thumbs.db

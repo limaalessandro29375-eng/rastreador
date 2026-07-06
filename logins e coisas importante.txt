@@ -1,0 +1,55 @@
+render - github email limaalessandro
+
+supabase github + senha Sa8BvD0NZtHv82oT (senha do projeto rastreador-db tbm)
+
+
+
+CONECTION STRING:
+url projeto supabase postgresql://postgres:[YOUR-PASSWORD]@db.bljlfzzcmvopyttijszs.supabase.co:5432/postgres
+
+host:
+db.bljlfzzcmvopyttijszs.supabase.co
+
+port:
+5432
+
+database:
+postgres
+
+user:
+postgres
+
+TRANSACTION POOLER:
+
+postgresql://postgres.bljlfzzcmvopyttijszs:[YOUR-PASSWORD]@aws-1-sa-east-1.pooler.supabase.com:6543/postgres
+
+host:
+aws-1-sa-east-1.pooler.supabase.com
+
+port:
+6543
+
+database:
+postgres
+
+user:
+postgres.bljlfzzcmvopyttijszs
+
+
+SESSION POOLER:
+
+postgresql://postgres.bljlfzzcmvopyttijszs:[YOUR-PASSWORD]@aws-1-sa-east-1.pooler.supabase.com:5432/postgres
+
+host:
+aws-1-sa-east-1.pooler.supabase.com
+
+port:
+5432
+
+database:
+postgres
+
+user:
+postgres.bljlfzzcmvopyttijszs
+
+
