@@ -1,0 +1,16 @@
+8.821 npm notice New major version of npm available! 10.8.2 -> 11.18.0
+8.821 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.18.0
+8.821 npm notice To update run: npm install -g npm@11.18.0
+8.821 npm notice
+8.821 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-07-06T18_41_58_436Z-debug-0.log
+------
+Dockerfile:4
+--------------------
+   2 |     WORKDIR /app
+   3 |     COPY package*.json ./
+   4 | >>> RUN npm ci
+   5 |     COPY prisma ./prisma
+   6 |     RUN npx prisma generate
+--------------------
+error: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+error: exit status 1
